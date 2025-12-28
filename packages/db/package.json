@@ -1,0 +1,33 @@
+{
+	"name": "@kobomonie/db",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"scripts": {
+		"db:push": "drizzle-kit push",
+		"db:generate": "drizzle-kit generate",
+		"db:studio": "drizzle-kit studio",
+		"db:migrate": "drizzle-kit migrate",
+		"db:start": "docker compose -f ../../infra/docker-compose.yml up -d",
+		"db:watch": "docker compose -f ../../infra/docker-compose.yml up",
+		"db:stop": "docker compose -f ../../infra/docker-compose.yml stop",
+		"db:down": "docker compose -f ../../infra/docker-compose.yml down"
+	},
+	"devDependencies": {
+		"drizzle-kit": "^0.31.8",
+		"@types/pg": "^8.15.6",
+		"typescript": "catalog:",
+		"@kobomonie/config": "workspace:*"
+	},
+	"dependencies": {
+		"drizzle-orm": "catalog:",
+		"postgres": "^3.4.5",
+		"@kobomonie/env": "workspace:*"
+	}
+}

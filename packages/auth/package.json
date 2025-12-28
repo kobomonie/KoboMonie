@@ -1,0 +1,24 @@
+{
+	"name": "@kobomonie/auth",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"scripts": {},
+	"devDependencies": {
+		"typescript": "catalog:",
+		"@kobomonie/config": "workspace:*"
+	},
+	"dependencies": {
+		"better-auth": "catalog:",
+		"dotenv": "catalog:",
+		"@kobomonie/db": "workspace:*",
+		"@kobomonie/env": "workspace:*",
+		"@kobomonie/notifications": "workspace:*"
+	}
+}

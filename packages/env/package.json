@@ -1,0 +1,18 @@
+{
+	"name": "@kobomonie/env",
+	"version": "0.0.0",
+	"main": "src/index.ts",
+	"types": "src/index.ts",
+	"scripts": {
+		"clean": "rm -rf dist"
+	},
+	"dependencies": {
+		"@t3-oss/env-core": "^0.11.1",
+		"dotenv": "^16.4.5",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@kobomonie/config": "workspace:*",
+		"typescript": "catalog:"
+	}
+}

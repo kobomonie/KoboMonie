@@ -5,15 +5,16 @@ import z from "zod";
 
 import { authClient } from "@/lib/auth-client";
 
-import Loader from "./loader";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
+import Loader from "@/components/loader";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import SocialAuth from "./social-auth";
 
-export default function SignUpForm({
-	onSwitchToSignIn,
+export default function SignInForm({
+	onSwitchToSignUp,
 }: {
-	onSwitchToSignIn: () => void;
+	onSwitchToSignUp: () => void;
 }) {
 	const navigate = useNavigate({
 		from: "/",
@@ -24,21 +25,19 @@ export default function SignUpForm({
 		defaultValues: {
 			email: "",
 			password: "",
-			name: "",
 		},
 		onSubmit: async ({ value }) => {
-			await authClient.signUp.email(
+			await authClient.signIn.email(
 				{
 					email: value.email,
 					password: value.password,
-					name: value.name,
 				},
 				{
 					onSuccess: () => {
 						navigate({
 							to: "/dashboard",
 						});
-						toast.success("Sign up successful");
+						toast.success("Sign in successful");
 					},
 					onError: (error) => {
 						toast.error(error.error.message || error.error.statusText);
@@ -48,7 +47,6 @@ export default function SignUpForm({
 		},
 		validators: {
 			onSubmit: z.object({
-				name: z.string().min(2, "Name must be at least 2 characters"),
 				email: z.email("Invalid email address"),
 				password: z.string().min(8, "Password must be at least 8 characters"),
 			}),
@@ -61,7 +59,7 @@ export default function SignUpForm({
 
 	return (
 		<div className="mx-auto mt-10 w-full max-w-md p-6">
-			<h1 className="mb-6 text-center font-bold text-3xl">Create Account</h1>
+			<h1 className="mb-6 text-center font-bold text-3xl">Welcome Back</h1>
 
 			<form
 				onSubmit={(e) => {
@@ -71,28 +69,6 @@ export default function SignUpForm({
 				}}
 				className="space-y-4"
 			>
-				<div>
-					<form.Field name="name">
-						{(field) => (
-							<div className="space-y-2">
-								<Label htmlFor={field.name}>Name</Label>
-								<Input
-									id={field.name}
-									name={field.name}
-									value={field.state.value}
-									onBlur={field.handleBlur}
-									onChange={(e) => field.handleChange(e.target.value)}
-								/>
-								{field.state.meta.errors.map((error) => (
-									<p key={error?.message} className="text-red-500">
-										{error?.message}
-									</p>
-								))}
-							</div>
-						)}
-					</form.Field>
-				</div>
-
 				<div>
 					<form.Field name="email">
 						{(field) => (
@@ -146,19 +122,32 @@ export default function SignUpForm({
 							className="w-full"
 							disabled={!state.canSubmit || state.isSubmitting}
 						>
-							{state.isSubmitting ? "Submitting..." : "Sign Up"}
+							{state.isSubmitting ? "Submitting..." : "Sign In"}
 						</Button>
 					)}
 				</form.Subscribe>
 			</form>
 
+			<div className="relative my-4">
+				<div className="absolute inset-0 flex items-center">
+					<span className="w-full border-t" />
+				</div>
+				<div className="relative flex justify-center text-xs uppercase">
+					<span className="bg-background px-2 text-muted-foreground">
+						Or continue with
+					</span>
+				</div>
+			</div>
+
+			<SocialAuth />
+
 			<div className="mt-4 text-center">
 				<Button
 					variant="link"
-					onClick={onSwitchToSignIn}
+					onClick={onSwitchToSignUp}
 					className="text-indigo-600 hover:text-indigo-800"
 				>
-					Already have an account? Sign In
+					Need an account? Sign Up
 				</Button>
 			</div>
 		</div>

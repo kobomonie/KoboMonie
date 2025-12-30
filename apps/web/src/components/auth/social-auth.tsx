@@ -39,8 +39,7 @@ export default function SocialAuth() {
 				Continue with Microsoft
 			</Button>
 			<Button
-				variant="outline"
-				className="w-full gap-2"
+				className="w-full gap-2 bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90"
 				onClick={() => handleSignIn("apple")}
 				type="button"
 			>

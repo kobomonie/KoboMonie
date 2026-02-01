@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function ProtectedSavingsSection() {
   return (
-    <section className='bg-white w-full mt-[40px] relative'>
+    <section className='bg-white w-full mt-[40px] relative pt-10'>
       {/* Mobile: Stacked (text first), Desktop: Text absolute over image gap */}
       <div className='flex flex-col-reverse lg:block relative'>
         {/* Text Container - absolute on large screens, positioned right */}
@@ -31,7 +31,7 @@ export default function ProtectedSavingsSection() {
           className='w-full max-w-7xl mx-auto flex justify-center lg:justify-start order-first lg:order-0 px-4 lg:px-0'
         >
           <img
-            src='/app-shot-2.png'
+            src='/app-shot-2.svg'
             alt='Protected Savings Preview'
             className='w-full h-auto object-contain'
           />

@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 interface StepCardProps {
   title: string;
   content: React.ReactNode;
-  isDark?: boolean;
   showBorder?: boolean;
   index: number;
 }
@@ -11,7 +10,6 @@ interface StepCardProps {
 const StepCard = ({
   title,
   content,
-  isDark = false,
   showBorder = true,
   index,
 }: StepCardProps) => (
@@ -20,21 +18,17 @@ const StepCard = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: '-50px' }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className={`p-6 lg:p-8 h-full ${isDark ? 'bg-[#0e3f40]' : 'bg-[#f8f8f8]'} ${
+    className={`p-6 lg:p-8 h-full bg-[#f8f8f8] hover:bg-[#0e3f40] group transition-colors duration-300 ${
       showBorder ? 'lg:border-r-[3px] lg:border-[#e8ecf4]' : ''
     }`}
   >
     <h3
-      className={`font-['Avenir:Medium',sans-serif] font-bold text-lg lg:text-xl leading-7 mb-6 lg:mb-10 ${
-        isDark ? 'text-white' : 'text-black'
-      }`}
+      className={`font-['Avenir:Medium',sans-serif] font-bold text-lg lg:text-xl leading-7 mb-6 lg:mb-10 text-black group-hover:text-white transition-colors duration-300`}
     >
       {title}
     </h3>
     <div
-      className={`font-['Avenir:Roman',sans-serif] text-sm lg:text-base leading-[22px] ${
-        isDark ? 'text-white' : 'text-black'
-      }`}
+      className={`font-['Avenir:Roman',sans-serif] text-sm lg:text-base leading-[22px] text-black group-hover:text-white transition-colors duration-300`}
     >
       {content}
     </div>
@@ -51,7 +45,6 @@ const STEPS = [
         esusu, but safer and fully digital.
       </p>
     ),
-    isDark: false,
   },
   {
     title: 'Payout are in two parts',
@@ -66,7 +59,6 @@ const STEPS = [
         <p>This gives you quick access to cash when you need it.</p>
       </>
     ),
-    isDark: false,
   },
   {
     title: 'Payout are in two parts',
@@ -81,7 +73,6 @@ const STEPS = [
         </p>
       </>
     ),
-    isDark: true,
   },
   {
     title: 'How the Locked Money Is Released',
@@ -94,7 +85,6 @@ const STEPS = [
         <p>You receive 100% of your money by the end of the thrift.</p>
       </>
     ),
-    isDark: false,
   },
 ];
 
@@ -122,7 +112,7 @@ export default function HowItWorksSection() {
         </motion.div>
 
         {/* Steps Grid */}
-        <div className='grid grid-cols-2 lg:grid-cols-4 rounded-xl overflow-hidden'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-xl overflow-hidden'>
           {STEPS.map((step, index) => (
             <StepCard
               key={index}

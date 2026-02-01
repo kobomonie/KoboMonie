@@ -31,7 +31,7 @@ export default function TransparentRotationSection() {
           className='w-full max-w-7xl mx-auto flex justify-center lg:justify-end px-4 lg:px-0'
         >
           <img
-            src='/app-shot-3.png'
+            src='/app-shot-3.svg'
             alt='Transparent Rotation System Preview'
             className='w-full h-auto object-contain'
           />

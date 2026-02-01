@@ -50,7 +50,7 @@ const WhyCard = ({
     >
       <Icon className='w-5 h-5 lg:w-6 lg:h-6' />
     </motion.div>
-    <h3 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] leading-7 text-[#1f2937] group-hover:text-white transition-colors duration-300 text-base lg:text-xl mb-2 lg:mb-4">
+    <h3 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold leading-7 text-[#1f2937] group-hover:text-white transition-colors duration-300 text-base lg:text-xl mb-2 lg:mb-4">
       {title}
     </h3>
     <p className="font-['Avenir:Roman',sans-serif] leading-6 lg:leading-[26px] text-[#4b5563] group-hover:text-[#d1d5db] transition-colors duration-300 text-sm lg:text-base">
@@ -113,7 +113,7 @@ export default function WhyKoboMonie() {
           transition={{ duration: 0.6 }}
           className='text-center mb-8 lg:mb-16'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] leading-tight text-[#1f2937] text-2xl lg:text-[50px] mb-3">
+          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold leading-tight text-[#1f2937] text-2xl lg:text-[50px] mb-3">
             Why KoboMonie Exists
           </h2>
           <p className="font-['Avenir:Roman',sans-serif] leading-7 text-[#4b5563] text-base lg:text-xl">

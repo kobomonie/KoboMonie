@@ -13,7 +13,7 @@ export default function TransparentRotationSection() {
           transition={{ duration: 0.6 }}
           className='px-6 sm:px-12 lg:px-24 xl:px-32 py-8 lg:py-0 lg:absolute lg:top-[40px] xl:top-[60px] lg:left-[80px] xl:left-[120px] z-10 lg:max-w-[800px]'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] leading-tight text-[#1f2937] text-2xl lg:text-[32px] xl:text-[40px]">
+          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold leading-tight text-[#1f2937] text-2xl lg:text-[32px] xl:text-[40px]">
             Transparent Rotation System
           </h2>
           <p className="font-['Avenir:Roman',sans-serif] leading-relaxed mt-3 text-[#4b5563] text-sm lg:text-base">

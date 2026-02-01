@@ -121,7 +121,7 @@ export default function MeetTheTeamSection() {
           transition={{ duration: 0.6 }}
           className='text-center mb-10 lg:mb-14'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
+          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             Meet The Team
           </h2>
           <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">

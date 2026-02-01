@@ -22,7 +22,7 @@ const TrustCard = ({ icon, title, description, index }: TrustCardProps) => (
     >
       {icon}
     </motion.div>
-    <h3 className="font-['Avenir:Medium',sans-serif] text-white text-base lg:text-xl leading-7 mb-2 lg:mb-4">
+    <h3 className="font-['Avenir:Medium',sans-serif] font-bold text-white text-base lg:text-xl leading-7 mb-2 lg:mb-4">
       {title}
     </h3>
     <p className="font-['Avenir:Roman',sans-serif] text-[#d1d5db] text-sm lg:text-base leading-6 max-w-[280px]">
@@ -140,7 +140,7 @@ export default function WhyTrustSection() {
           transition={{ duration: 0.6 }}
           className='text-center mb-10 lg:mb-16'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] text-white text-2xl lg:text-4xl leading-tight mb-3">
+          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-white text-2xl lg:text-4xl leading-tight mb-3">
             Why Trust KoboMonie
           </h2>
           <p className="font-['Avenir:Medium',sans-serif] text-[#d1d5db] text-sm lg:text-base">

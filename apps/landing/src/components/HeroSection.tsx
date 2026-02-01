@@ -175,7 +175,7 @@ export default function HeroSection() {
             </div>
 
             {/* Hero Title */}
-            <h1 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] text-gray-800 text-3xl lg:text-5xl leading-tight lg:leading-[56px] mb-4">
+            <h1 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-gray-800 text-3xl lg:text-5xl leading-tight lg:leading-[56px] mb-4">
               Rotational Savings <span className='underline'>made simple</span>,
               and <span className='underline'>stress-free</span>
             </h1>

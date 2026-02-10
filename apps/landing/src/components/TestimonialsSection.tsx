@@ -31,15 +31,15 @@ const TestimonialCard = ({
         <img src={avatar} alt={name} className='w-full h-full object-cover' />
       </div>
       <div>
-        <p className="font-['Avenir:Medium',sans-serif] text-[#1f2937] text-sm lg:text-base leading-6">
+        <p className="font-['Avenir',sans-serif] font-medium text-[#1f2937] text-sm lg:text-base leading-6">
           {name}
         </p>
-        <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-xs lg:text-sm leading-5">
+        <p className="font-['Avenir',sans-serif] text-[#4b5563] text-xs lg:text-sm leading-5">
           {location}
         </p>
       </div>
     </div>
-    <p className="font-['Avenir:Roman',sans-serif] text-[#374151] text-sm lg:text-base leading-[26px]">
+    <p className="font-['Avenir',sans-serif] text-[#374151] text-sm lg:text-base leading-[26px]">
       "{quote}"
     </p>
   </motion.div>
@@ -100,10 +100,10 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.6 }}
           className='text-center mb-10 lg:mb-14'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
+          <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             What Our Users Say
           </h2>
-          <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
+          <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
             Real stories from real savers
           </p>
         </motion.div>

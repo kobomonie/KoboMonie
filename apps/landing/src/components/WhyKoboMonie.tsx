@@ -6,7 +6,7 @@ interface WhyCardProps {
   iconBg: string;
   title: string;
   description: string;
-  gradient: string;
+  bgColor: string;
   index: number;
 }
 
@@ -15,45 +15,31 @@ const WhyCard = ({
   iconBg,
   title,
   description,
-  gradient,
+  bgColor,
   index,
 }: WhyCardProps) => (
   <motion.div
-    initial='rest'
-    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, scale: 0.9, backgroundColor: bgColor }}
+    whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true, margin: '-50px' }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    whileHover='hover'
-    variants={{
-      rest: {
-        opacity: 0,
-        y: 30,
-        backgroundColor: 'rgba(0,0,0,0)',
-        backgroundImage: gradient,
-      },
-      hover: {
-        y: -5,
-        backgroundColor: '#0e3f40',
-        backgroundImage: 'none',
-        opacity: 1,
-      },
+    whileHover={{
+      y: -5,
+      boxShadow: '0 10px 30px -10px rgba(0,0,0,0.1)',
+      backgroundColor: '#00664e',
     }}
-    className='group flex flex-col items-center text-center lg:items-start lg:text-left p-6 lg:p-8 rounded-2xl h-full'
-    style={{ backgroundImage: gradient }}
+    className='group flex flex-col items-start text-left p-6 lg:p-8 rounded-2xl h-full transition-all duration-[50]'
   >
-    <motion.div
-      variants={{
-        rest: { backgroundColor: iconBg, color: '#ffffff' },
-        hover: { backgroundColor: '#ffffff', color: iconBg },
-      }}
-      className='rounded-xl w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center mb-4 lg:mb-6'
+    <div
+      className='rounded-xl w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center mb-4 lg:mb-6 transition-colors duration-[50] group-hover:bg-white!'
+      style={{ backgroundColor: iconBg }}
     >
-      <Icon className='w-5 h-5 lg:w-6 lg:h-6' />
-    </motion.div>
-    <h3 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold leading-7 text-[#1f2937] group-hover:text-white transition-colors duration-300 text-base lg:text-xl mb-2 lg:mb-4">
+      <Icon className='w-6 h-6 lg:w-7 lg:h-7 text-white group-hover:text-[#00664e] transition-colors duration-[50]' />
+    </div>
+    <h3 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-[#1f2937] text-lg lg:text-xl mb-3 group-hover:text-white transition-colors duration-300">
       {title}
     </h3>
-    <p className="font-['Avenir:Roman',sans-serif] leading-6 lg:leading-[26px] text-[#4b5563] group-hover:text-[#d1d5db] transition-colors duration-300 text-sm lg:text-base">
+    <p className="font-['Avenir',sans-serif] leading-relaxed text-[#4b5563] text-sm lg:text-[15px] group-hover:text-gray-100 transition-colors duration-300">
       {description}
     </p>
   </motion.div>
@@ -62,39 +48,35 @@ const WhyCard = ({
 const WHY_CARDS = [
   {
     icon: Landmark,
-    iconBg: '#10b981',
+    iconBg: '#10b981', // Green
     title: 'Built on African Tradition',
     description:
       'We digitalize Ajo/Esusu rotational savings to preserve trust while removing the stress of managing contributions manually.',
-    gradient:
-      'linear-gradient(127deg, rgba(240, 253, 244, 1) 0%, rgba(236, 253, 245, 1) 71%)',
+    bgColor: '#ecfdf5', // Light Green
   },
   {
     icon: Bot,
-    iconBg: '#3b82f6',
+    iconBg: '#3b82f6', // Blue
     title: 'Automated & Transparent',
     description:
       'No chasing contributors, no confusion. KoboMonie handles contributions, turns, payouts, and reminders automatically.',
-    gradient:
-      'linear-gradient(127deg, rgba(239, 246, 255, 1) 0%, rgba(236, 254, 255, 1) 71%)',
+    bgColor: '#eff6ff', // Light Blue
   },
   {
     icon: Users,
-    iconBg: '#a855f7',
+    iconBg: '#a855f7', // Purple
     title: 'Save Together, Grow Together',
     description:
       'Join trusted circles, build financial discipline, and access bulk cash easily without loans or interest.',
-    gradient:
-      'linear-gradient(127deg, rgba(250, 245, 255, 1) 0%, rgba(253, 242, 248, 1) 71%)',
+    bgColor: '#faf5ff', // Light Purple
   },
   {
     icon: Shield,
-    iconBg: '#f97316',
+    iconBg: '#f97316', // Orange
     title: 'Secure & Easy to Use',
     description:
       'Your money is protected with advanced digital security and a simple interface anyone can use.',
-    gradient:
-      'linear-gradient(127deg, rgba(255, 247, 237, 1) 0%, rgba(254, 242, 242, 1) 71%)',
+    bgColor: '#fff7ed', // Light Orange
   },
 ];
 
@@ -102,27 +84,46 @@ export default function WhyKoboMonie() {
   return (
     <section
       id='why-kobomonie'
-      className='bg-white w-full px-6 sm:px-12 lg:px-24 xl:px-32 py-12 lg:py-20 mt-[40px]'
+      className='bg-white w-full px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24'
     >
-      <div className='max-w-7xl mx-auto'>
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-8 lg:mb-16'
-        >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold leading-tight text-[#1f2937] text-2xl lg:text-[50px] mb-3">
-            Why KoboMonie Exists
-          </h2>
-          <p className="font-['Avenir:Roman',sans-serif] leading-7 text-[#4b5563] text-base lg:text-xl">
-            Experience the modern way to save together
-          </p>
-        </motion.div>
+      <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start'>
+        {/* Left Column - Text Content */}
+        <div className='flex flex-col gap-8'>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-[#1f2937] text-3xl lg:text-[42px] mb-6">
+              Get Bulk Money When you need it Without Borrowing
+            </h2>
+            <p className="font-['Avenir',sans-serif] leading-relaxed text-[#4b5563] text-base lg:text-lg mb-8">
+              Whether it’s for business, rent, school fees, or personal goals,
+              KoboMonie helps you access meaningful money without borrowing and
+              without trusting blind luck.
+            </p>
+          </motion.div>
 
-        {/* Cards Grid - Stack on mobile, 4 cols on desktop */}
-        <div className='flex flex-col lg:grid lg:grid-cols-4 gap-4 lg:gap-8'>
+          {/* Dark Green Highlight Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className='bg-[#0f291e] text-white p-8 lg:p-10 rounded-2xl shadow-xl'
+          >
+            <p className="font-['Avenir',sans-serif] leading-loose text-base lg:text-lg font-medium">
+              Because life needs bulk money, not debt, not excuses, not risk.
+              KoboMonie is a smarter way to do ajo/esusu/adashe/akawo, designed
+              to give you access to lump-sum money without loans, interest, or
+              fear of fraud.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Right Column - Feature Cards Grid */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6'>
           {WHY_CARDS.map((card, index) => (
             <WhyCard key={index} {...card} index={index} />
           ))}

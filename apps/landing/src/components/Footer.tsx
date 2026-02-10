@@ -51,10 +51,10 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 lg:mb-12">
           {/* Brand Column */}
           <div className="col-span-2 lg:col-span-1">
-            <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] text-white text-2xl mb-4">
+            <h2 className="font-['ClashDisplay',sans-serif] text-white text-2xl mb-4">
               KoboMonie
             </h2>
-            <p className="font-['Avenir:Roman',sans-serif] text-white text-sm lg:text-base leading-6 mb-6 max-w-[265px]">
+            <p className="font-['Avenir',sans-serif] text-white text-sm lg:text-base leading-6 mb-6 max-w-[265px]">
               Rotational savings made simple, secure, and stress-free
             </p>
 
@@ -75,14 +75,14 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div>
-            <h3 className="font-['Avenir:Medium',sans-serif] text-white text-lg mb-4 lg:mb-6">
+            <h3 className="font-['ClashDisplay',sans-serif] text-white text-lg mb-4 lg:mb-6">
               Contact
             </h3>
             <div className="space-y-2">
-              <p className="font-['Avenir:Roman',sans-serif] text-white text-sm lg:text-base">
+              <p className="font-['Avenir',sans-serif] text-white text-sm lg:text-base">
                 +234 7054510343
               </p>
-              <p className="font-['Avenir:Roman',sans-serif] text-white text-sm lg:text-base">
+              <p className="font-['Avenir',sans-serif] text-white text-sm lg:text-base">
                 hello@kobomonie.com.ng
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Product Column */}
           <div>
-            <h3 className="font-['Avenir:Medium',sans-serif] text-white text-lg mb-4 lg:mb-6">
+            <h3 className="font-['ClashDisplay',sans-serif] text-white text-lg mb-4 lg:mb-6">
               Product
             </h3>
             <ul className="space-y-2 lg:space-y-3">
@@ -98,7 +98,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="font-['Avenir:Roman',sans-serif] text-white text-sm lg:text-base hover:text-[#10b981] transition-colors"
+                    className="font-['Avenir',sans-serif] text-white text-sm lg:text-base hover:text-[#10b981] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -109,7 +109,7 @@ export default function Footer() {
 
           {/* Legal Column */}
           <div>
-            <h3 className="font-['Avenir:Medium',sans-serif] text-white text-lg mb-4 lg:mb-6">
+            <h3 className="font-['ClashDisplay',sans-serif] text-white text-lg mb-4 lg:mb-6">
               Legal
             </h3>
             <ul className="space-y-2 lg:space-y-3">
@@ -117,7 +117,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="font-['Avenir:Roman',sans-serif] text-white text-sm lg:text-base hover:text-[#10b981] transition-colors"
+                    className="font-['Avenir',sans-serif] text-white text-sm lg:text-base hover:text-[#10b981] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -129,7 +129,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-white/10 pt-6 lg:pt-8">
-          <p className="font-['Avenir:Roman',sans-serif] text-white text-xs lg:text-sm">
+          <p className="font-['Avenir',sans-serif] text-white text-xs lg:text-sm">
             © 2024 KoboMonie. All rights reserved.
           </p>
         </div>

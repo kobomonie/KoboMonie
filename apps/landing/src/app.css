@@ -105,3 +105,25 @@ body {
 .container {
   max-width: var(--container-width);
 }
+
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('/ClashDisplay-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/AvenirLTProBook.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ClashDisplay', sans-serif;
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+}

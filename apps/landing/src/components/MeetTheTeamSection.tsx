@@ -53,10 +53,10 @@ const TeamMemberCard = ({
 
     {/* Info */}
     <div className='p-4 text-center'>
-      <p className="font-['Avenir:Medium',sans-serif] text-white text-xs uppercase tracking-wide mb-1">
+      <p className="font-['Avenir',sans-serif] font-medium text-white text-xs uppercase tracking-wide mb-1">
         <span className='font-semibold'>{name}</span>, {role}
       </p>
-      <p className="font-['Avenir:Roman',sans-serif] text-white/80 text-xs mb-2">
+      <p className="font-['Avenir',sans-serif] text-white/80 text-xs mb-2">
         {company}
       </p>
 
@@ -65,7 +65,7 @@ const TeamMemberCard = ({
           href={linkedIn}
           target='_blank'
           rel='noopener noreferrer'
-          className="inline-flex items-center justify-center gap-2 text-[#dcfce7] text-xs hover:text-white transition-colors font-['Avenir:Roman',sans-serif]"
+          className="inline-flex items-center justify-center gap-2 text-[#dcfce7] text-xs hover:text-white transition-colors font-['Avenir',sans-serif]"
         >
           <LinkedInIcon />
           <span>LinkedIn</span>
@@ -80,28 +80,28 @@ const TEAM_MEMBERS = [
     name: 'Tomiwa Samuel',
     role: 'Head of Product',
     company: 'KoboMonie',
-    image: '/stakeholder-1.jpg',
+    image: '/Tomiwa Samuel Photo.png',
     linkedIn: '#',
   },
   {
     name: 'Muyiwa Isreal',
     role: 'Head of Finance',
     company: 'KoboMonie',
-    image: '/stakeholder-3.jpg',
+    image: '/Muyiwa Isreal Photo.jpg',
     linkedIn: '#',
   },
   {
     name: 'Mayowa Emmanuel',
     role: 'Director',
     company: 'Bossmeek Group',
-    image: '/stakeholder-2.jpg',
+    image: '/Mayowa Emmanuel.png',
     linkedIn: '#',
   },
   {
     name: 'Fikayo Olagunju',
     role: 'Director of Tech',
     company: 'Descasio',
-    image: '/stakeholder-4.jpg',
+    image: '/Fikayo Olagunju.jpg',
     linkedIn: '#',
   },
 ];
@@ -121,10 +121,10 @@ export default function MeetTheTeamSection() {
           transition={{ duration: 0.6 }}
           className='text-center mb-10 lg:mb-14'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
+          <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             Meet The Team
           </h2>
-          <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
+          <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
             The people building KoboMonie
           </p>
         </motion.div>

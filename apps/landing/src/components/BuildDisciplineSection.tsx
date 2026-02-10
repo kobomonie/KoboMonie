@@ -84,10 +84,10 @@ const Feature = ({ icon, title, description, index }: FeatureProps) => (
       {icon}
     </motion.div>
     <div>
-      <h3 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-[#1f2937] text-base lg:text-lg leading-normal mb-1">
+      <h3 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-base lg:text-lg leading-normal mb-1">
         {title}
       </h3>
-      <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-sm lg:text-base leading-6">
+      <p className="font-['Avenir',sans-serif] text-[#4b5563] text-sm lg:text-base leading-6">
         {description}
       </p>
     </div>
@@ -133,10 +133,10 @@ export default function BuildDisciplineSection() {
           transition={{ duration: 0.6 }}
           className='text-center mb-10 lg:mb-14'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
+          <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             Build Your Financial Discipline with KoboMonie
           </h2>
-          <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
+          <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
             Stay consistent, accountable, and intentional with your savings
           </p>
         </motion.div>

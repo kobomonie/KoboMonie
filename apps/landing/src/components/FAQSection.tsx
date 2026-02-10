@@ -47,7 +47,7 @@ const FAQItem = ({
       onClick={onToggle}
       className='w-full flex items-center justify-between py-4 lg:py-6 text-left'
     >
-      <span className="font-['Avenir:Medium',sans-serif] font-bold text-[#1f2937] text-base lg:text-xl pr-4">
+      <span className="font-['Avenir',sans-serif] font-medium font-bold text-[#1f2937] text-base lg:text-xl pr-4">
         {question}
       </span>
       <ChevronIcon isOpen={isOpen} />
@@ -61,7 +61,7 @@ const FAQItem = ({
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className='overflow-hidden'
         >
-          <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-sm lg:text-base leading-6 pb-4 lg:pb-6">
+          <p className="font-['Avenir',sans-serif] text-[#4b5563] text-sm lg:text-base leading-6 pb-4 lg:pb-6">
             {answer}
           </p>
         </motion.div>
@@ -126,16 +126,16 @@ export default function FAQSection() {
             transition={{ duration: 0.6 }}
             className='lg:w-1/3 mb-8 lg:mb-0'
           >
-            <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-4">
+            <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7 mb-6">
+            <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7 mb-6">
               Learn more about everything you need about KoboMonie
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#00664e] text-white font-['Avenir:Roman',sans-serif] text-base px-8 lg:px-14 py-3 lg:py-4 rounded-lg hover:bg-[#005540] transition-colors"
+              className="bg-[#00664e] text-white font-['Avenir',sans-serif] text-base px-8 lg:px-14 py-3 lg:py-4 rounded-lg hover:bg-[#005540] transition-colors"
             >
               Ask Question
             </motion.button>

@@ -23,12 +23,12 @@ const StepCard = ({
     }`}
   >
     <h3
-      className={`font-['Avenir:Medium',sans-serif] font-bold text-lg lg:text-xl leading-7 mb-6 lg:mb-10 text-black group-hover:text-white transition-colors duration-300`}
+      className={`font-['Avenir',sans-serif] font-medium font-bold text-lg lg:text-xl leading-7 mb-6 lg:mb-10 text-black group-hover:text-white transition-colors duration-300`}
     >
       {title}
     </h3>
     <div
-      className={`font-['Avenir:Roman',sans-serif] text-sm lg:text-base leading-[22px] text-black group-hover:text-white transition-colors duration-300`}
+      className={`font-['Avenir',sans-serif] text-sm lg:text-base leading-[22px] text-black group-hover:text-white transition-colors duration-300`}
     >
       {content}
     </div>
@@ -103,10 +103,10 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.6 }}
           className='text-center mb-10 lg:mb-14'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
+          <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             How KoboMonie Rotational Savings Works
           </h2>
-          <p className="font-['Avenir:Roman',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
+          <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
             KoboMonie keeps savings safe, fair, and stress-free
           </p>
         </motion.div>

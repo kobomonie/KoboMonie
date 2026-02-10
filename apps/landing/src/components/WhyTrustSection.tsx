@@ -18,14 +18,14 @@ const TrustCard = ({ icon, title, description, index }: TrustCardProps) => (
     <motion.div
       whileHover={{ scale: 1.1, rotate: 5 }}
       transition={{ type: 'spring', stiffness: 300 }}
-      className='bg-[rgba(16,185,129,0.2)] rounded-full w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center mb-4 lg:mb-6'
+      className='bg-[#dcfce7] rounded-full w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center mb-4 lg:mb-6'
     >
       {icon}
     </motion.div>
-    <h3 className="font-['Avenir:Medium',sans-serif] font-bold text-white text-base lg:text-xl leading-7 mb-2 lg:mb-4">
+    <h3 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-base lg:text-xl leading-7 mb-2 lg:mb-4">
       {title}
     </h3>
-    <p className="font-['Avenir:Roman',sans-serif] text-[#d1d5db] text-sm lg:text-base leading-6 max-w-[280px]">
+    <p className="font-['Avenir',sans-serif] text-[#4b5563] text-sm lg:text-base leading-6 max-w-[280px]">
       {description}
     </p>
   </motion.div>
@@ -130,7 +130,7 @@ const TRUST_FEATURES = [
 
 export default function WhyTrustSection() {
   return (
-    <section className='bg-[#0e3f40] w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'>
+    <section className='bg-white w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'>
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <motion.div
@@ -140,10 +140,10 @@ export default function WhyTrustSection() {
           transition={{ duration: 0.6 }}
           className='text-center mb-10 lg:mb-16'
         >
-          <h2 className="font-['Avenir_LT_Std:85_Heavy',sans-serif] font-bold text-white text-2xl lg:text-4xl leading-tight mb-3">
+          <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             Why Trust KoboMonie
           </h2>
-          <p className="font-['Avenir:Medium',sans-serif] text-[#d1d5db] text-sm lg:text-base">
+          <p className="font-['Avenir',sans-serif] font-medium text-[#4b5563] text-sm lg:text-base">
             Trust isn't a promise, it's designed into how the system works.
           </p>
         </motion.div>

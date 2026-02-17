@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function ProtectedSavingsSection() {
   return (
-    <section className='bg-[url("/Background1.svg")] bg-cover bg-center w-full relative py-16 lg:py-24'>
+    <section className='bg-[url("/Background1.svg")] bg-cover bg-center w-full mt-[40px] relative py-16 lg:py-36'>
       {/* Mobile: Stacked (text first), Desktop: Text absolute over image gap */}
       <div className='flex flex-col-reverse lg:block relative'>
         {/* Text Container - absolute on large screens, positioned right */}
@@ -11,7 +11,7 @@ export default function ProtectedSavingsSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className='px-6 sm:px-12 lg:px-24 xl:px-32 py-8 lg:py-0 lg:absolute lg:top-[40px] xl:top-[60px] lg:right-[80px] xl:right-[120px] z-20 lg:max-w-[550px]'
+          className='px-6 sm:px-12 lg:px-24 xl:px-32 py-8 lg:py-0 lg:absolute lg:right-[80px] xl:right-[300px] z-20 lg:max-w-[550px] xl:-top-[100px]'
         >
           <h2 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-white text-2xl lg:text-[32px] xl:text-[40px] lg:text-right">
             Protected savings account

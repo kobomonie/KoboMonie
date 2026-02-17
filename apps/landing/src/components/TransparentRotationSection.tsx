@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function TransparentRotationSection() {
   return (
-    <section className='bg-[url("/Background2.svg")] bg-cover bg-center w-full relative py-16 lg:py-24'>
+    <section className='bg-[url("/Background2.svg")] bg-cover bg-center w-full relative py-16 lg:py-36 mt-[40px]'>
       {/* Mobile: Stacked, Desktop: Text absolute over image gap */}
       <div className='flex flex-col lg:block relative'>
         {/* Text Container - absolute on large screens */}
@@ -11,7 +11,7 @@ export default function TransparentRotationSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className='px-6 sm:px-12 lg:px-24 xl:px-32 py-8 lg:py-0 lg:absolute lg:top-[40px] xl:top-[60px] lg:left-[80px] xl:left-[120px] z-20 lg:max-w-[550px]'
+          className='px-6 sm:px-12 lg:px-24 xl:px-32 py-8 lg:py-0 lg:absolute xl:-top-[100px] lg:left-[80px] xl:left-[300px] z-20 lg:max-w-[550px]'
         >
           <h2 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-white text-2xl lg:text-[32px] xl:text-[40px]">
             Transparent Rotation System

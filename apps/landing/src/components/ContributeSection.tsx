@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function ContributeSection() {
   return (
-    <section className='bg-[url("/Background2.svg")] bg-cover bg-center w-full mt-[40px] relative py-16 lg:py-56'>
+    <section className='bg-[url("/Background2.svg")] bg-cover bg-center w-full relative py-16 lg:py-36 mt-[40px]'>
       {/* Mobile: Stacked, Desktop: Text absolute over image gap */}
       <div className='flex flex-col lg:block relative'>
         {/* Text Container - absolute on large screens */}
@@ -11,7 +11,7 @@ export default function ContributeSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className='py-8 lg:py-4 lg:absolute lg:left-[80px] xl:left-[120px] z-10 lg:max-w-[550px] debug'
+          className='py-8 lg:py-4 lg:absolute lg:left-[80px] xl:left-[300px] z-10 lg:max-w-[550px] xl:-top-[100px]'
         >
           <h2 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-white text-2xl lg:text-[32px] xl:text-[40px]">
             Contribute and Track Progress

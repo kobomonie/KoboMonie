@@ -11,8 +11,8 @@ interface TeamMemberProps {
 
 const LinkedInIcon = () => (
   <svg
-    width='14'
-    height='16'
+    width='12'
+    height='14'
     viewBox='0 0 14 16'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
@@ -52,11 +52,11 @@ const TeamMemberCard = ({
     </div>
 
     {/* Info */}
-    <div className='p-4 text-center'>
-      <p className="font-['Avenir',sans-serif] font-medium text-white text-xs uppercase tracking-wide mb-1">
+    <div className='p-2 text-center'>
+      <p className="font-['Avenir',sans-serif] font-medium text-white text-xs uppercase tracking-wide mb-0.5">
         <span className='font-semibold'>{name}</span>, {role}
       </p>
-      <p className="font-['Avenir',sans-serif] text-white/80 text-xs mb-2">
+      <p className="font-['Avenir',sans-serif] text-white/80 text-xs mb-1">
         {company}
       </p>
 
@@ -65,7 +65,7 @@ const TeamMemberCard = ({
           href={linkedIn}
           target='_blank'
           rel='noopener noreferrer'
-          className="inline-flex items-center justify-center gap-2 text-[#dcfce7] text-xs hover:text-white transition-colors font-['Avenir',sans-serif]"
+          className="inline-flex items-center justify-center gap-1 text-[#dcfce7] text-[10px] hover:text-white transition-colors font-['Avenir',sans-serif] mt-0.5"
         >
           <LinkedInIcon />
           <span>LinkedIn</span>

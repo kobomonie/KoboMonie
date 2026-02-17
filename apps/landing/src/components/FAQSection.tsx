@@ -45,9 +45,9 @@ const FAQItem = ({
   >
     <button
       onClick={onToggle}
-      className='w-full flex items-center justify-between py-4 lg:py-6 text-left'
+      className='w-full flex items-center justify-between py-4 lg:py-6 text-left group'
     >
-      <span className="font-['Avenir',sans-serif] font-medium font-bold text-[#1f2937] text-base lg:text-xl pr-4">
+      <span className="font-['Avenir',sans-serif]  font-bold text-[#1f2937] text-base lg:text-xl pr-4 group-hover:text-[#00664e] transition-colors">
         {question}
       </span>
       <ChevronIcon isOpen={isOpen} />
@@ -61,7 +61,7 @@ const FAQItem = ({
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className='overflow-hidden'
         >
-          <p className="font-['Avenir',sans-serif] text-[#4b5563] text-sm lg:text-base leading-6 pb-4 lg:pb-6">
+          <p className="font-['Avenir',sans-serif] text-[#4b5563] text-sm lg:text-base leading-7 pb-4 lg:pb-6 whitespace-pre-line">
             {answer}
           </p>
         </motion.div>
@@ -72,39 +72,58 @@ const FAQItem = ({
 
 const FAQ_DATA = [
   {
-    question: 'Is KoboMonie a Loan Platform?',
+    question: 'Is KoboMonie a loan platform?',
     answer:
-      'No. KoboMonie is not a loan platform. You only receive money you are already part of saving.',
+      'No.\nKoboMonie is not a loan platform\nYou only receive money you are already part of saving.',
   },
   {
     question: 'Can someone collect money and stop paying?',
     answer:
-      'No. KoboMonie uses a locked balance system where 60% of your payout is held and released gradually as you continue contributing. This ensures everyone stays committed throughout the savings cycle.',
+      'No.\nAnyone who collects early receives only part of their payout upfront.\nThe remaining balance stays locked and is released only if they continue contributing.\nIf they stop paying, they stop unlocking money.',
   },
   {
     question: 'What happens if someone defaults?',
     answer:
-      'If a member fails to contribute, their locked balance is used to cover the shortfall. This protects other members from losing their money.',
+      'Their remaining locked balance:\nIs not released to them\nIs used to protect the savings cycle\nOther members are not affected.',
   },
   {
     question: 'Do I lose money if someone else fails?',
     answer:
-      'No. The locked balance system is designed to protect all members. If someone defaults, their locked funds cover the gap, not your savings.',
+      'No.\nThe system is designed so no one person’s failure affects the group.',
   },
   {
     question: 'Why is part of my money locked?',
     answer:
-      'The locked balance ensures everyone stays committed to the savings circle. It is released gradually as you continue contributing each month, and you receive 100% by the end of the thrift.',
+      'This protects everyone in the group.\n\nIn traditional savings groups, someone can collect early and stop contributing. KoboMonie prevents this by making sure no one can run away with the full money.',
+  },
+  {
+    question: 'Do I still get all my money eventually?',
+    answer:
+      'Yes.\nEvery member:\nContributes the same amount\nReceives the same total payout\nThe only difference is timing, not value.',
+  },
+  {
+    question: 'What if I’m the last to collect?',
+    answer:
+      'Then you receive 100% of your payout at once, since you’ve already completed your contributions.',
   },
   {
     question: 'Is my money safe on KoboMonie?',
     answer:
-      'Yes. Your funds are protected with industry-standard 256-bit SSL encryption and stored in secure wallets. KoboMonie is designed with multiple safety features to protect your savings.',
+      'Yes.\nFunds are tracked transparently\nAccess is rule-based\nNo manual handling\nNo surprise deductions\nYour money moves only according to the system rules.',
   },
   {
-    question: 'Is this the same as traditional Ajo/Esusu?',
+    question: 'Is this the same as traditional ajo?',
     answer:
-      'KoboMonie digitizes the traditional Ajo/Esusu concept while adding modern security features. You get the same community savings experience, but with automated tracking, transparent rules, and fraud protection.',
+      'It’s inspired by it, but safer.\nKoboMonie keeps the discipline and community of ajo, while removing the risk of human error and fraud.',
+  },
+  {
+    question: 'Why should I trust KoboMonie as a new platform?',
+    answer:
+      'Because trust isn’t a promise, it’s designed into how the system works.\nYou don’t rely on people behaving well.\nThe system enforces fairness automatically.',
+  },
+  {
+    question: 'Can I save alone or must I join a group?',
+    answer: 'You can:\nJoin a savings circle\nCreate one',
   },
 ];
 
@@ -126,8 +145,8 @@ export default function FAQSection() {
             transition={{ duration: 0.6 }}
             className='lg:w-1/3 mb-8 lg:mb-0'
           >
-            <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-4">
-              Frequently Asked Questions
+            <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-4 uppercase">
+              FAQ – Frequently Asked Questions
             </h2>
             <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7 mb-6">
               Learn more about everything you need about KoboMonie

@@ -14,43 +14,44 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <main className="bg-[#f8f8f8] h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth w-full">
-      <div className="snap-start shrink-0">
+    <main className="bg-[#f8f8f8] min-h-screen w-full">
+      <div>
         <HeroSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <WhyKoboMonie />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <ContributeSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <ProtectedSavingsSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <TransparentRotationSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <WhyTrustSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <HowItWorksSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <BuildDisciplineSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <TestimonialsSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <MeetTheTeamSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <FAQSection />
       </div>
-      <div className="snap-start shrink-0">
+      <div>
         <Footer />
       </div>
     </main>
   )
 }
+

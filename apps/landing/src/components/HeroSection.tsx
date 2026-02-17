@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Shield } from 'lucide-react';
+import {
+  Shield,
+  ShieldCheck,
+  Bot,
+  CircleDollarSign,
+  Users,
+} from 'lucide-react';
 
 const MenuIcon = () => (
   <svg
@@ -42,7 +48,7 @@ export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <section className='relative w-full min-h-screen lg:min-h-[786px] bg-linear-to-br from-[#f0fdf4] via-[#ecfdf5] to-white overflow-hidden'>
+    <section className='relative w-full min-h-screen lg:min-h-[786px] overflow-hidden bg-white'>
       {/* Header */}
       <header className='relative z-50 flex items-center justify-between w-full max-w-7xl mx-auto px-4 lg:px-8 py-4'>
         {/* Logo */}
@@ -159,12 +165,44 @@ export default function HeroSection() {
             </p>
 
             {/* Features List */}
-            <ul className='font-medium text-gray-700 text-sm lg:text-lg leading-8 lg:leading-9 list-disc pl-6 mb-8'>
-              <li>100% tracking, secure, automated and transparent</li>
-              <li>No physical meetings, no chasing late members</li>
-              <li>Your money is always visible and controlled</li>
-              <li>Everyone contributes fairly</li>
-            </ul>
+            {/* Features List */}
+            <div className='flex flex-col gap-4 mb-8'>
+              <div className='flex items-center gap-3 lg:gap-4'>
+                <div className='shrink-0'>
+                  <ShieldCheck className='w-6 h-6 lg:w-7 lg:h-7 text-[#00664e]' />
+                </div>
+                <span className='font-medium text-gray-700 text-sm lg:text-lg leading-7 lg:leading-8'>
+                  100% tracking, secure, automated and transparent
+                </span>
+              </div>
+
+              <div className='flex items-center gap-3 lg:gap-4'>
+                <div className='shrink-0'>
+                  <Bot className='w-6 h-6 lg:w-7 lg:h-7 text-[#00664e]' />
+                </div>
+                <span className='font-medium text-gray-700 text-sm lg:text-lg leading-7 lg:leading-8'>
+                  No physical meetings, no chasing late members
+                </span>
+              </div>
+
+              <div className='flex items-center gap-3 lg:gap-4'>
+                <div className='shrink-0'>
+                  <CircleDollarSign className='w-6 h-6 lg:w-7 lg:h-7 text-[#00664e]' />
+                </div>
+                <span className='font-medium text-gray-700 text-sm lg:text-lg leading-7 lg:leading-8'>
+                  Your money is always visible and controlled
+                </span>
+              </div>
+
+              <div className='flex items-center gap-3 lg:gap-4'>
+                <div className='shrink-0'>
+                  <Users className='w-6 h-6 lg:w-7 lg:h-7 text-[#00664e]' />
+                </div>
+                <span className='font-medium text-gray-700 text-sm lg:text-lg leading-7 lg:leading-8'>
+                  Everyone contributes fairly
+                </span>
+              </div>
+            </div>
 
             {/* CTA Button */}
             <motion.button

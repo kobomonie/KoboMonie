@@ -1,3 +1,4 @@
+import SectionWrapper from './SectionWrapper';
 import { motion } from 'motion/react';
 
 interface StepCardProps {
@@ -23,7 +24,7 @@ const StepCard = ({
     }`}
   >
     <h3
-      className={`font-['Avenir',sans-serif] font-medium font-bold text-lg lg:text-xl leading-7 mb-6 lg:mb-10 text-black group-hover:text-white transition-colors duration-300`}
+      className={`font-['Avenir',sans-serif]  font-bold text-lg lg:text-xl leading-7 mb-6 lg:mb-10 text-black group-hover:text-white transition-colors duration-300`}
     >
       {title}
     </h3>
@@ -90,26 +91,20 @@ const STEPS = [
 
 export default function HowItWorksSection() {
   return (
-    <section
+    <SectionWrapper
       id='how-it-works'
       className='bg-white w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'
     >
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-10 lg:mb-14'
-        >
+        <div className='text-center mb-10 lg:mb-14'>
           <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             How KoboMonie Rotational Savings Works
           </h2>
           <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7">
             KoboMonie keeps savings safe, fair, and stress-free
           </p>
-        </motion.div>
+        </div>
 
         {/* Steps Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-xl overflow-hidden'>
@@ -123,6 +118,6 @@ export default function HowItWorksSection() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

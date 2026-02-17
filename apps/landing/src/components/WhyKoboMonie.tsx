@@ -1,3 +1,4 @@
+import SectionWrapper from './SectionWrapper';
 import { motion } from 'motion/react';
 import { Landmark, Bot, Users, Shield } from 'lucide-react';
 
@@ -82,19 +83,14 @@ const WHY_CARDS = [
 
 export default function WhyKoboMonie() {
   return (
-    <section
+    <SectionWrapper
       id='why-kobomonie'
       className='bg-white w-full px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24'
     >
       <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start'>
         {/* Left Column - Text Content */}
         <div className='flex flex-col gap-8'>
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h2 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-[#1f2937] text-3xl lg:text-[42px] mb-6">
               Get Bulk Money When you need it Without Borrowing
             </h2>
@@ -103,7 +99,7 @@ export default function WhyKoboMonie() {
               KoboMonie helps you access meaningful money without borrowing and
               without trusting blind luck.
             </p>
-          </motion.div>
+          </div>
 
           {/* Dark Green Highlight Card */}
           <motion.div
@@ -111,7 +107,7 @@ export default function WhyKoboMonie() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='bg-[#0f291e] text-white p-8 lg:p-10 rounded-2xl shadow-xl'
+            className='bg-[#0f4041] text-white p-8 lg:p-10 rounded-2xl shadow-xl'
           >
             <p className="font-['Avenir',sans-serif] leading-loose text-base lg:text-lg font-medium">
               Because life needs bulk money, not debt, not excuses, not risk.
@@ -129,6 +125,6 @@ export default function WhyKoboMonie() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

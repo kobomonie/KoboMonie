@@ -72,21 +72,17 @@
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
 }
 
-/* Scroll snap for sections */
-section {
-  scroll-snap-align: start;
-}
+/* Scroll snap removed */
 
 * {
   border-color: theme('colors.border');
 }
 
 body {
-  background-color: theme('colors.background');
-  color: theme('colors.foreground');
+  background-color: white;
+  color: black;
   margin: 0;
   padding: 0;
 }
@@ -126,4 +122,8 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: 'Avenir', sans-serif;
+}
+
+.debug{
+  @apply border-2 border-red-500
 }

@@ -1,4 +1,6 @@
+import SectionWrapper from './SectionWrapper';
 import { motion } from 'motion/react';
+import { ClipboardCheck, HandCoins, Zap, ChartLine } from 'lucide-react';
 
 interface TrustCardProps {
   icon: React.ReactNode;
@@ -31,97 +33,30 @@ const TrustCard = ({ icon, title, description, index }: TrustCardProps) => (
   </motion.div>
 );
 
-// SVG Icons
-const TrackingIcon = () => (
-  <svg
-    width='24'
-    height='30'
-    viewBox='0 0 24 30'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-    className='w-5 h-6 lg:w-6 lg:h-7'
-  >
-    <path
-      d='M12 2L2 7V13.5C2 20.35 6.26 26.74 12 28.5C17.74 26.74 22 20.35 22 13.5V7L12 2ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z'
-      fill='#10B981'
-    />
-  </svg>
-);
-
-const TransparencyIcon = () => (
-  <svg
-    width='32'
-    height='30'
-    viewBox='0 0 32 30'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-    className='w-6 h-6 lg:w-8 lg:h-7'
-  >
-    <path
-      d='M4 4H28V8H4V4ZM4 12H28V16H4V12ZM4 20H20V24H4V20ZM24 20L28 24L24 28V20Z'
-      fill='#10B981'
-    />
-  </svg>
-);
-
-const NoChargesIcon = () => (
-  <svg
-    width='26'
-    height='30'
-    viewBox='0 0 26 30'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-    className='w-5 h-6 lg:w-6 lg:h-7'
-  >
-    <path
-      d='M13 2C7.48 2 3 6.48 3 12C3 17.52 7.48 22 13 22C18.52 22 23 17.52 23 12C23 6.48 18.52 2 13 2ZM14 17H12V15H14V17ZM14 13H12V7H14V13Z'
-      fill='#10B981'
-    />
-    <path
-      d='M2 26L24 4'
-      stroke='#10B981'
-      strokeWidth='2'
-      strokeLinecap='round'
-    />
-  </svg>
-);
-
-const FraudResistantIcon = () => (
-  <svg
-    width='28'
-    height='30'
-    viewBox='0 0 28 30'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-    className='w-5 h-6 lg:w-7 lg:h-7'
-  >
-    <path
-      d='M14 2L4 6V14C4 21.1 8.26 27.66 14 29.5C19.74 27.66 24 21.1 24 14V6L14 2ZM14 14.99H22C21.22 20.3 18.1 25.03 14 26.93V15H6V7.3L14 4.19V14.99Z'
-      fill='#10B981'
-    />
-  </svg>
-);
+// SVG Icons removed in favor of Lucide React icons
 
 const TRUST_FEATURES = [
   {
-    icon: <TrackingIcon />,
+    icon: <ClipboardCheck className='w-6 h-6 lg:w-8 lg:h-8 text-[#10B981]' />,
     title: 'Automated Tracking',
     description:
       'Every contribution and payout is tracked automatically in real time',
   },
   {
-    icon: <TransparencyIcon />,
+    icon: <HandCoins className='w-6 h-6 lg:w-8 lg:h-8 text-[#10B981]' />,
     title: 'Transparent Savings Rules',
     description:
       "You always know how much you're saving, when you'll collect, and how everything works",
   },
   {
-    icon: <NoChargesIcon />,
+    icon: (
+      <Zap className='w-6 h-6 lg:w-8 lg:h-8 text-[#10B981]' fill='#10B981' />
+    ),
     title: 'No Hidden Charges',
     description: 'No surprise deductions. No unclear fees',
   },
   {
-    icon: <FraudResistantIcon />,
+    icon: <ChartLine className='w-6 h-6 lg:w-8 lg:h-8 text-[#10B981]' />,
     title: 'Fraud Resistant System',
     description:
       'KoboMonie is designed so no one can collect money and disappear',
@@ -130,23 +65,17 @@ const TRUST_FEATURES = [
 
 export default function WhyTrustSection() {
   return (
-    <section className='bg-white w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'>
+    <SectionWrapper className='bg-white w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'>
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-10 lg:mb-16'
-        >
+        <div className='text-center mb-10 lg:mb-16'>
           <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             Why Trust KoboMonie
           </h2>
           <p className="font-['Avenir',sans-serif] font-medium text-[#4b5563] text-sm lg:text-base">
             Trust isn't a promise, it's designed into how the system works.
           </p>
-        </motion.div>
+        </div>
 
         {/* Features Grid */}
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8'>
@@ -155,6 +84,6 @@ export default function WhyTrustSection() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

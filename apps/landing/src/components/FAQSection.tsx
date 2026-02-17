@@ -146,7 +146,7 @@ export default function FAQSection() {
             className='lg:w-1/3 mb-8 lg:mb-0'
           >
             <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-4 uppercase">
-              FAQ – Frequently Asked Questions
+              Frequently Asked Questions
             </h2>
             <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7 mb-6">
               Learn more about everything you need about KoboMonie

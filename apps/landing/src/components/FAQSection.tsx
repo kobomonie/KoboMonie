@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 interface FAQItemProps {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   isOpen: boolean;
   onToggle: () => void;
   index: number;
@@ -61,9 +61,9 @@ const FAQItem = ({
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className='overflow-hidden'
         >
-          <p className="font-['Avenir',sans-serif] text-[#4b5563] text-sm lg:text-base leading-7 pb-4 lg:pb-6 whitespace-pre-line">
+          <div className="font-['Avenir',sans-serif] text-[#4b5563] text-sm lg:text-base leading-7 pb-4 lg:pb-6">
             {answer}
-          </p>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
@@ -73,33 +73,75 @@ const FAQItem = ({
 const FAQ_DATA = [
   {
     question: 'Is KoboMonie a loan platform?',
-    answer:
-      'No.\nKoboMonie is not a loan platform\nYou only receive money you are already part of saving.',
+    answer: (
+      <>
+        No.
+        <br />
+        KoboMonie is not a loan platform.
+        <br />
+        You only receive money you are already part of saving.
+      </>
+    ),
   },
   {
     question: 'Can someone collect money and stop paying?',
-    answer:
-      'No.\nAnyone who collects early receives only part of their payout upfront.\nThe remaining balance stays locked and is released only if they continue contributing.\nIf they stop paying, they stop unlocking money.',
+    answer: (
+      <>
+        No. Anyone who collects early receives only part of their payout
+        upfront.
+        <ul className='list-disc pl-5 mt-2 space-y-1'>
+          <li>
+            The remaining balance stays locked and is released only if they
+            continue contributing.
+          </li>
+          <li>If they stop paying, they stop unlocking money.</li>
+        </ul>
+      </>
+    ),
   },
   {
     question: 'What happens if someone defaults?',
-    answer:
-      'Their remaining locked balance:\nIs not released to them\nIs used to protect the savings cycle\nOther members are not affected.',
+    answer: (
+      <>
+        Their remaining locked balance:
+        <ul className='list-disc pl-5 mt-2 space-y-1'>
+          <li>Is not released to them</li>
+          <li>Is used to protect the savings cycle</li>
+          <li>Other members are not affected.</li>
+        </ul>
+      </>
+    ),
   },
   {
     question: 'Do I lose money if someone else fails?',
     answer:
-      'No.\nThe system is designed so no one person’s failure affects the group.',
+      'No. The system is designed so no one person’s failure affects the group.',
   },
   {
     question: 'Why is part of my money locked?',
-    answer:
-      'This protects everyone in the group.\n\nIn traditional savings groups, someone can collect early and stop contributing. KoboMonie prevents this by making sure no one can run away with the full money.',
+    answer: (
+      <>
+        This protects everyone in the group.
+        <br />
+        <br />
+        In traditional savings groups, someone can collect early and stop
+        contributing. KoboMonie prevents this by making sure no one can run away
+        with the full money.
+      </>
+    ),
   },
   {
     question: 'Do I still get all my money eventually?',
-    answer:
-      'Yes.\nEvery member:\nContributes the same amount\nReceives the same total payout\nThe only difference is timing, not value.',
+    answer: (
+      <>
+        Yes. Every member:
+        <ul className='list-disc pl-5 mt-2 space-y-1'>
+          <li>Contributes the same amount</li>
+          <li>Receives the same total payout</li>
+        </ul>
+        The only difference is timing, not value.
+      </>
+    ),
   },
   {
     question: 'What if I’m the last to collect?',
@@ -108,22 +150,53 @@ const FAQ_DATA = [
   },
   {
     question: 'Is my money safe on KoboMonie?',
-    answer:
-      'Yes.\nFunds are tracked transparently\nAccess is rule-based\nNo manual handling\nNo surprise deductions\nYour money moves only according to the system rules.',
+    answer: (
+      <>
+        Yes.
+        <ul className='list-disc pl-5 mt-2 space-y-1'>
+          <li>Funds are tracked transparently</li>
+          <li>Access is rule-based</li>
+          <li>No manual handling</li>
+          <li>No surprise deductions</li>
+        </ul>
+        Your money moves only according to the system rules.
+      </>
+    ),
   },
   {
     question: 'Is this the same as traditional ajo?',
-    answer:
-      'It’s inspired by it, but safer.\nKoboMonie keeps the discipline and community of ajo, while removing the risk of human error and fraud.',
+    answer: (
+      <>
+        It’s inspired by it, but safer.
+        <br />
+        KoboMonie keeps the discipline and community of ajo, while removing the
+        risk of human error and fraud.
+      </>
+    ),
   },
   {
     question: 'Why should I trust KoboMonie as a new platform?',
-    answer:
-      'Because trust isn’t a promise, it’s designed into how the system works.\nYou don’t rely on people behaving well.\nThe system enforces fairness automatically.',
+    answer: (
+      <>
+        Because trust isn’t a promise, it’s designed into how the system works.
+        <ul className='list-disc pl-5 mt-2 space-y-1'>
+          <li>You don’t rely on people behaving well.</li>
+          <li>The system enforces fairness automatically.</li>
+        </ul>
+      </>
+    ),
   },
   {
     question: 'Can I save alone or must I join a group?',
-    answer: 'You can:\nJoin a savings circle\nCreate one',
+    answer: (
+      <>
+        You can:
+        <ul className='list-disc pl-5 mt-2 space-y-1'>
+          <li>Join a savings circle</li>
+          <li>Create one</li>
+        </ul>
+      </>
+    ),
   },
 ];
 
@@ -145,7 +218,7 @@ export default function FAQSection() {
             transition={{ duration: 0.6 }}
             className='lg:w-1/3 mb-8 lg:mb-0'
           >
-            <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-4 uppercase">
+            <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-4">
               Frequently Asked Questions
             </h2>
             <p className="font-['Avenir',sans-serif] text-[#4b5563] text-base lg:text-xl leading-7 mb-6">

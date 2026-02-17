@@ -2,21 +2,19 @@ import { motion } from 'motion/react';
 
 export default function TransparentRotationSection() {
   return (
-    <section className='bg-[url("/Background2.svg")] bg-cover bg-center w-full relative py-16 lg:py-36 mt-[40px]'>
-      {/* Mobile: Stacked, Desktop: Text absolute over image gap */}
-      <div className='flex flex-col lg:block relative'>
-        {/* Text Container - absolute on large screens */}
+    <section className='bg-[url("/Background2.svg")] bg-cover bg-center w-full mt-[40px] py-16 lg:py-24'>
+      <div className='max-w-[1440px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center'>
+        {/* Text Container */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className='px-6 sm:px-12 lg:px-24 xl:px-32 py-8 lg:py-0 lg:absolute xl:-top-[100px] lg:left-[80px] xl:left-[300px] z-20 lg:max-w-[550px]'
         >
-          <h2 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-white text-2xl lg:text-[32px] xl:text-[40px]">
+          <h2 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-white text-3xl lg:text-4xl xl:text-5xl mb-6">
             Transparent Rotation System
           </h2>
-          <p className="font-['Avenir',sans-serif] leading-relaxed mt-3 text-gray-200 text-sm lg:text-base">
+          <p className="font-['Avenir',sans-serif] leading-relaxed text-gray-200 text-base lg:text-lg">
             Every member sees the lineup, contribution history, payout dates and
             community rules
           </p>
@@ -24,16 +22,16 @@ export default function TransparentRotationSection() {
 
         {/* Image Container */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className='w-full max-w-7xl mx-auto flex justify-center lg:justify-end px-4 lg:px-0'
+          className='flex justify-center lg:justify-end'
         >
           <img
             src='/CommunityDetailsSection.svg'
             alt='Transparent Rotation System Preview'
-            className='w-full h-auto object-contain'
+            className='w-full max-w-lg lg:max-w-full h-auto object-contain'
           />
         </motion.div>
       </div>

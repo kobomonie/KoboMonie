@@ -95,9 +95,9 @@ export default function HowItWorksSection() {
       id='how-it-works'
       className='bg-white w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'
     >
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         {/* Header */}
-        <div className='text-center mb-10 lg:mb-14'>
+        <div className='mb-10 text-center lg:mb-14'>
           <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             How KoboMonie Rotational Savings Works
           </h2>
@@ -107,7 +107,7 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Steps Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 rounded-xl overflow-hidden'>
+        <div className='grid overflow-hidden grid-cols-1 gap-4 rounded-xl md:grid-cols-2 lg:grid-cols-4 lg:gap-0'>
           {STEPS.map((step, index) => (
             <StepCard
               key={index}

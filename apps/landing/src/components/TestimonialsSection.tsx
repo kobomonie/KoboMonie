@@ -23,12 +23,12 @@ const TestimonialCard = ({
     viewport={{ once: true, margin: '-50px' }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     whileHover={{ y: -5 }}
-    className='p-6 lg:p-8 rounded-2xl h-full'
+    className='p-6 h-full rounded-2xl lg:p-8'
     style={{ backgroundImage: gradient }}
   >
-    <div className='flex items-center gap-4 mb-4 lg:mb-6'>
-      <div className='w-12 h-12 lg:w-16 lg:h-16 rounded-full overflow-hidden bg-gray-200 shrink-0'>
-        <img src={avatar} alt={name} className='w-full h-full object-cover' />
+    <div className='flex gap-4 items-center mb-4 lg:mb-6'>
+      <div className='overflow-hidden w-12 h-12 bg-gray-200 rounded-full lg:w-16 lg:h-16 shrink-0'>
+        <img src={avatar} alt={name} className='object-cover w-full h-full' />
       </div>
       <div>
         <p className="font-['Avenir',sans-serif] font-medium text-[#1f2937] text-sm lg:text-base leading-6">
@@ -91,14 +91,14 @@ const TESTIMONIALS = [
 export default function TestimonialsSection() {
   return (
     <section className='bg-white w-full py-12 lg:py-20 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'>
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className='text-center mb-10 lg:mb-14'
+          className='mb-10 text-center lg:mb-14'
         >
           <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             What Our Users Say
@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8'>
           {TESTIMONIALS.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} index={index} />
           ))}

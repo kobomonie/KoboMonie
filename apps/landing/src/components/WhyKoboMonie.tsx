@@ -85,9 +85,9 @@ export default function WhyKoboMonie() {
   return (
     <SectionWrapper
       id='why-kobomonie'
-      className='bg-white w-full px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24'
+      className='py-16 px-4 w-full bg-white sm:px-8 lg:px-16 xl:px-24 lg:py-24'
     >
-      <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start'>
+      <div className='grid grid-cols-1 gap-12 items-start mx-auto max-w-7xl lg:grid-cols-2 lg:gap-20'>
         {/* Left Column - Text Content */}
         <div className='flex flex-col gap-8'>
           <div>
@@ -119,7 +119,7 @@ export default function WhyKoboMonie() {
         </div>
 
         {/* Right Column - Feature Cards Grid */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6'>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6'>
           {WHY_CARDS.map((card, index) => (
             <WhyCard key={index} {...card} index={index} />
           ))}

@@ -45,7 +45,7 @@ const FAQItem = ({
   >
     <button
       onClick={onToggle}
-      className='w-full flex items-center justify-between py-4 lg:py-6 text-left group'
+      className='flex justify-between items-center py-4 w-full text-left lg:py-6 group'
     >
       <span className="font-['Avenir',sans-serif]  font-bold text-[#1f2937] text-base lg:text-xl pr-4 group-hover:text-[#00664e] transition-colors">
         {question}
@@ -89,7 +89,7 @@ const FAQ_DATA = [
       <>
         No. Anyone who collects early receives only part of their payout
         upfront.
-        <ul className='list-disc pl-5 mt-2 space-y-1'>
+        <ul className='pl-5 mt-2 space-y-1 list-disc'>
           <li>
             The remaining balance stays locked and is released only if they
             continue contributing.
@@ -104,7 +104,7 @@ const FAQ_DATA = [
     answer: (
       <>
         Their remaining locked balance:
-        <ul className='list-disc pl-5 mt-2 space-y-1'>
+        <ul className='pl-5 mt-2 space-y-1 list-disc'>
           <li>Is not released to them</li>
           <li>Is used to protect the savings cycle</li>
           <li>Other members are not affected.</li>
@@ -135,7 +135,7 @@ const FAQ_DATA = [
     answer: (
       <>
         Yes. Every member:
-        <ul className='list-disc pl-5 mt-2 space-y-1'>
+        <ul className='pl-5 mt-2 space-y-1 list-disc'>
           <li>Contributes the same amount</li>
           <li>Receives the same total payout</li>
         </ul>
@@ -153,7 +153,7 @@ const FAQ_DATA = [
     answer: (
       <>
         Yes.
-        <ul className='list-disc pl-5 mt-2 space-y-1'>
+        <ul className='pl-5 mt-2 space-y-1 list-disc'>
           <li>Funds are tracked transparently</li>
           <li>Access is rule-based</li>
           <li>No manual handling</li>
@@ -179,7 +179,7 @@ const FAQ_DATA = [
     answer: (
       <>
         Because trust isn’t a promise, it’s designed into how the system works.
-        <ul className='list-disc pl-5 mt-2 space-y-1'>
+        <ul className='pl-5 mt-2 space-y-1 list-disc'>
           <li>You don’t rely on people behaving well.</li>
           <li>The system enforces fairness automatically.</li>
         </ul>
@@ -191,7 +191,7 @@ const FAQ_DATA = [
     answer: (
       <>
         You can:
-        <ul className='list-disc pl-5 mt-2 space-y-1'>
+        <ul className='pl-5 mt-2 space-y-1 list-disc'>
           <li>Join a savings circle</li>
           <li>Create one</li>
         </ul>
@@ -208,7 +208,7 @@ export default function FAQSection() {
       id='faqs'
       className='bg-[#effdf4] w-full py-12 lg:py-20 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'
     >
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         <div className='lg:flex lg:gap-16'>
           {/* Left Side - Header */}
           <motion.div

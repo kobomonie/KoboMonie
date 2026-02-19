@@ -13,7 +13,7 @@ const Feature = ({ title, description, index }: FeatureProps) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: '-50px' }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className='flex items-start gap-4 text-right'
+    className='flex gap-4 items-start text-center lg:text-right'
   >
     <div>
       <h3 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-base lg:text-lg leading-normal mb-1">
@@ -52,9 +52,9 @@ const FEATURES = [
 export default function BuildDisciplineSection() {
   return (
     <SectionWrapper className='bg-[#f0fdf7] w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px] overflow-hidden'>
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         {/* Header */}
-        <div className='text-center mb-10 lg:mb-14'>
+        <div className='mb-10 text-center lg:mb-14'>
           <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             Build Your Financial Discipline with KoboMonie
           </h2>
@@ -94,7 +94,7 @@ export default function BuildDisciplineSection() {
         </div>
 
         {/* Mobile Layout - Stacked (no SVG) */}
-        <div className='lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8'>
+        <div className='grid grid-cols-1 gap-6 lg:hidden sm:grid-cols-2 sm:gap-8'>
           {FEATURES.map((feature, index) => (
             <Feature key={index} {...feature} index={index} />
           ))}

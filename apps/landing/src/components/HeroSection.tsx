@@ -50,14 +50,14 @@ export default function HeroSection() {
   return (
     <section className='relative w-full min-h-screen lg:min-h-[786px] overflow-hidden bg-white'>
       {/* Header */}
-      <header className='relative z-50 flex items-center justify-between w-full max-w-7xl mx-auto px-4 lg:px-8 py-4'>
+      <header className='flex relative z-50 justify-between items-center py-4 px-4 mx-auto w-full max-w-7xl lg:px-8'>
         {/* Logo */}
         <div className='h-8 lg:h-10 shrink-0'>
-          <img alt='KoboMonie Logo' src='/logo.svg' className='h-full w-auto' />
+          <img alt='KoboMonie Logo' src='/logo.svg' className='w-auto h-full' />
         </div>
 
         {/* Navigation - Hidden on mobile */}
-        <nav className='hidden lg:flex gap-10 items-center'>
+        <nav className='hidden gap-10 items-center lg:flex'>
           <a
             href='#why-kobomonie'
             className='font-medium text-gray-800 text-lg hover:text-[#00664e] transition-colors'
@@ -89,7 +89,7 @@ export default function HeroSection() {
 
         {/* Hamburger Button - Mobile */}
         <button
-          className='lg:hidden p-2'
+          className='p-2 lg:hidden'
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <XIcon /> : <MenuIcon />}
@@ -102,25 +102,25 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className='absolute top-full left-0 right-0 bg-white shadow-xl p-4 flex flex-col gap-4 lg:hidden z-50 border-t border-gray-100'
+              className='flex absolute right-0 left-0 top-full z-50 flex-col gap-4 p-4 bg-white border-t border-gray-100 shadow-xl lg:hidden'
             >
               <a
                 href='#why-kobomonie'
-                className='font-medium text-gray-800 text-lg py-2'
+                className='py-2 text-lg font-medium text-gray-800'
                 onClick={() => setIsMenuOpen(false)}
               >
                 Why KoboMonie
               </a>
               <a
                 href='#faqs'
-                className='font-medium text-gray-800 text-lg py-2'
+                className='py-2 text-lg font-medium text-gray-800'
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQs
               </a>
               <a
                 href='#how-it-works'
-                className='font-medium text-gray-800 text-lg py-2'
+                className='py-2 text-lg font-medium text-gray-800'
                 onClick={() => setIsMenuOpen(false)}
               >
                 How it works
@@ -134,8 +134,8 @@ export default function HeroSection() {
       </header>
 
       {/* Main Content */}
-      <div className='max-w-7xl mx-auto px-4 lg:px-8 pt-8 lg:pt-12'>
-        <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12'>
+      <div className='px-4 pt-8 mx-auto max-w-7xl lg:px-8 lg:pt-12'>
+        <div className='flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12'>
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -167,38 +167,38 @@ export default function HeroSection() {
             {/* Features List */}
             {/* Features List */}
             <div className='flex flex-col gap-4 mb-8'>
-              <div className='flex items-center gap-3 lg:gap-4'>
+              <div className='flex gap-3 items-center lg:gap-4'>
                 <div className='shrink-0'>
                   <ShieldCheck className='w-6 h-6 lg:w-7 lg:h-7 text-[#00664e]' />
                 </div>
-                <span className='font-medium text-gray-700 text-sm lg:text-lg leading-7 lg:leading-8'>
+                <span className='text-sm font-medium leading-7 text-gray-700 lg:text-lg lg:leading-8'>
                   100% tracking, secure, automated and transparent
                 </span>
               </div>
 
-              <div className='flex items-center gap-3 lg:gap-4'>
+              <div className='flex gap-3 items-center lg:gap-4'>
                 <div className='shrink-0'>
                   <Bot className='w-6 h-6 lg:w-7 lg:h-7 text-[#00664e]' />
                 </div>
-                <span className='font-medium text-gray-700 text-sm lg:text-lg leading-7 lg:leading-8'>
+                <span className='text-sm font-medium leading-7 text-gray-700 lg:text-lg lg:leading-8'>
                   No physical meetings, no chasing late members
                 </span>
               </div>
 
-              <div className='flex items-center gap-3 lg:gap-4'>
+              <div className='flex gap-3 items-center lg:gap-4'>
                 <div className='shrink-0'>
                   <CircleDollarSign className='w-6 h-6 lg:w-7 lg:h-7 text-[#00664e]' />
                 </div>
-                <span className='font-medium text-gray-700 text-sm lg:text-lg leading-7 lg:leading-8'>
+                <span className='text-sm font-medium leading-7 text-gray-700 lg:text-lg lg:leading-8'>
                   Your money is always visible and controlled
                 </span>
               </div>
 
-              <div className='flex items-center gap-3 lg:gap-4'>
+              <div className='flex gap-3 items-center lg:gap-4'>
                 <div className='shrink-0'>
                   <Users className='w-6 h-6 lg:w-7 lg:h-7 text-[#00664e]' />
                 </div>
-                <span className='font-medium text-gray-700 text-sm lg:text-lg leading-7 lg:leading-8'>
+                <span className='text-sm font-medium leading-7 text-gray-700 lg:text-lg lg:leading-8'>
                   Everyone contributes fairly
                 </span>
               </div>
@@ -225,7 +225,7 @@ export default function HeroSection() {
             <img
               alt='Hero'
               src='/hero.svg'
-              className='w-full h-full object-contain'
+              className='object-contain w-full h-full'
             />
           </motion.div>
         </div>

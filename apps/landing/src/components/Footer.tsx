@@ -83,8 +83,8 @@ const SOCIAL_LINKS = [
 export default function Footer() {
   return (
     <footer className='bg-[#00664e] w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 lg:mb-12'>
+      <div className='mx-auto max-w-7xl'>
+        <div className='grid grid-cols-2 gap-8 mb-8 lg:grid-cols-4 lg:gap-12 lg:mb-12'>
           {/* Brand Column */}
           <div className='col-span-2 lg:col-span-1'>
             <h2 className="font-['ClashDisplay',sans-serif] text-white text-2xl mb-4">

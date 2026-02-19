@@ -42,13 +42,13 @@ const TeamMemberCard = ({
     className='bg-[#00664e] rounded-2xl overflow-hidden shadow-lg flex flex-col'
   >
     {/* Image */}
-    <div className='h-48 lg:h-64 overflow-hidden'>
+    <div className='overflow-hidden h-48 lg:h-64'>
       <motion.img
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
         src={image}
         alt={name}
-        className='w-full h-full object-cover object-top'
+        className='object-cover object-top w-full h-full'
       />
     </div>
 
@@ -113,14 +113,14 @@ export default function MeetTheTeamSection() {
       id='team'
       className='bg-[#f9fafb] w-full py-12 lg:py-20 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'
     >
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className='text-center mb-10 lg:mb-14'
+          className='mb-10 text-center lg:mb-14'
         >
           <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             Meet The Team
@@ -131,7 +131,7 @@ export default function MeetTheTeamSection() {
         </motion.div>
 
         {/* Team Grid */}
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8'>
+        <div className='grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-8'>
           {TEAM_MEMBERS.map((member, index) => (
             <TeamMemberCard key={index} {...member} index={index} />
           ))}

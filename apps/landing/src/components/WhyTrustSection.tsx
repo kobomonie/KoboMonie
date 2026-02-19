@@ -66,9 +66,9 @@ const TRUST_FEATURES = [
 export default function WhyTrustSection() {
   return (
     <SectionWrapper className='bg-white w-full py-12 lg:py-16 px-6 sm:px-12 lg:px-24 xl:px-32 mt-[40px]'>
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         {/* Header */}
-        <div className='text-center mb-10 lg:mb-16'>
+        <div className='mb-10 text-center lg:mb-16'>
           <h2 className="font-['ClashDisplay',sans-serif] font-bold text-[#1f2937] text-2xl lg:text-4xl leading-tight mb-3">
             Why Trust KoboMonie
           </h2>
@@ -78,7 +78,7 @@ export default function WhyTrustSection() {
         </div>
 
         {/* Features Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8'>
+        <div className='grid grid-cols-1 gap-6 lg:grid-cols-4 lg:gap-8'>
           {TRUST_FEATURES.map((feature, index) => (
             <TrustCard key={index} {...feature} index={index} />
           ))}

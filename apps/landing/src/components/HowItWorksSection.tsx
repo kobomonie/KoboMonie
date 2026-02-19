@@ -19,7 +19,7 @@ const StepCard = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: '-50px' }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className={`p-6 lg:p-8 h-full bg-[#f8f8f8] hover:bg-[#0e3f40] group transition-colors duration-300 ${
+    className={`p-6 lg:p-8 h-full bg-[#f8f8f8] hover:bg-[#0e3f40] group transition-colors duration-300 rounded-xl lg:rounded-none ${
       showBorder ? 'lg:border-r-[3px] lg:border-[#e8ecf4]' : ''
     }`}
   >
@@ -107,7 +107,7 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Steps Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-xl overflow-hidden'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 rounded-xl overflow-hidden'>
           {STEPS.map((step, index) => (
             <StepCard
               key={index}

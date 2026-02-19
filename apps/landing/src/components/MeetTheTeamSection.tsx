@@ -9,22 +9,6 @@ interface TeamMemberProps {
   index: number;
 }
 
-const LinkedInIcon = () => (
-  <svg
-    width='12'
-    height='12'
-    viewBox='-1 0 16 16'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-    className='shrink-0'
-  >
-    <path
-      d='M3.5 2C3.5 3.10457 2.60457 4 1.5 4C0.395431 4 -0.5 3.10457 -0.5 2C-0.5 0.895431 0.395431 0 1.5 0C2.60457 0 3.5 0.895431 3.5 2ZM3.5 5.5H-0.5V16H3.5V5.5ZM7.5 5.5H4.5V16H7.5V10.5C7.5 7.5 11.5 7.25 11.5 10.5V16H14.5V9.25C14.5 4.5 8.75 4.75 7.5 7V5.5Z'
-      fill='currentColor'
-    />
-  </svg>
-);
-
 const TeamMemberCard = ({
   name,
   role,

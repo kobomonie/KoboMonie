@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 export default function TransparentRotationSection() {
   return (
     <section className='bg-[url("/Background2.svg")] bg-cover bg-center w-full mt-[40px] py-16 lg:py-24'>
-      <div className='max-w-[1440px] mx-auto px-6 lg:px-12'>
+      <div className='max-w-[1440px] mx-auto px-4 lg:px-12'>
         <div className='flex flex-col-reverse lg:relative'>
           {/* Image - full width, sits on top */}
           <motion.div
@@ -25,7 +25,7 @@ export default function TransparentRotationSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='relative py-4 pr-6 pl-4 lg:absolute lg:-top-20 lg:left-0 lg:right-0'
+            className='relative py-4 px-4 lg:absolute lg:top-0 lg:w-fit lg:left-0 lg:right-0 w-full'
           >
             <h2 className="font-['ClashDisplay',sans-serif] font-bold leading-tight text-white text-3xl lg:text-4xl xl:text-5xl mb-3">
               Transparent Rotation System
